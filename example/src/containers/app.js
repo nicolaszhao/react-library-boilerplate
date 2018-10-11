@@ -1,26 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
 import cls from 'classnames';
 import { APP_BASE_URL } from 'config/base-url';
+import Home from './Home';
 import NoMatch from './NoMatch';
-import Nav from './nav';
+import Nav from './Nav';
 import style from './app.scss';
-
-const NavItem = Nav.Item;
-
-const Home = () => (
-  <ul>
-    {routes.map((route, i) => (
-      <NavItem 
-        key={i} 
-        label={route.text} 
-        to={route.path} 
-        activeOnlyWhenExact={route.path === '/'} 
-      />
-    ))}
-  </ul>
-);
 
 const routes = [
   {
