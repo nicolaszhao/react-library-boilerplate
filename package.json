@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "{{{description}}}",
   "main": "dist/{{name}}.js",
-  "module": "dist/{{name}.esm.js",
+  "module": "dist/{{name}}.esm.js",
   "style": "dist/{{name}}.css",
   "engines": {
     "node": ">=8",
