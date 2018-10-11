@@ -1,0 +1,46 @@
+@import "../styles/colors";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.2em;
+  border-bottom: dotted 1px #ccc; /* px */
+  position: relative;
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .menus-switch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 1.4em;
+    height: 1.2em;
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translate3d(0, -50%, 0);
+
+    &:before,
+    &:after,
+    &-text {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 2px; /* px */
+      background: $primary-color;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+}

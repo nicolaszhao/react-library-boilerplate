@@ -1,0 +1,33 @@
+@import "../styles/colors";
+
+.nav {
+  width: 100%;
+  height: calc(100vh - 4.2em);
+  padding: 1em;
+  overflow-y: auto;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1999;
+  background: rgba(24, 183, 226, .8);
+
+  ul {
+    display: grid;
+    grid-gap: 1px;
+  }
+
+  li {
+    background: $highlight-color;
+    color: #fff;
+  }
+
+  a {
+    display: block;
+    padding: 1.2em .5em;
+    color: hsla(0, 0%, 100%, .7);
+
+    &.active {
+      color: #fff;
+    }
+  }
+}
