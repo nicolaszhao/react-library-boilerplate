@@ -53,6 +53,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-router-dom": "^4.3.1",
+    "react-tote-box": "^0.2.2",
     "react-transition-group": "^2.4.0",
     "sanitize.css": "^6.0.0",
     "tote-box": "^0.9.1",
