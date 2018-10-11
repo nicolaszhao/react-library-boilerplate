@@ -41,3 +41,5 @@ npm i {{name}}
    ```js
    import { Example } from '{{name}}';
    ```
+
+5. create `Container` in `example/src/containers` and edit `example/src/containers/routes.js` 
