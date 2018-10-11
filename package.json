@@ -1,0 +1,68 @@
+{
+  "name": "react-components-library-boilerplate",
+  "version": "0.1.0",
+  "description": "{{{description}}}",
+  "main": "dist/{{name}}.js",
+  "module": "dist/{{name}.esm.js",
+  "style": "dist/{{name}}.css",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=production rollup -c -w",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "test": "cross-env NODE_ENV=test mocha --require @babel/register",
+    "precommit": "lint-staged"
+  },
+  "keywords": [
+    "components",
+    "library"
+  ],
+  "author": "{{{author}}}",
+  "peerDependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-transition-group": "^2.4.0",
+    "@babel/runtime": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "autoprefixer": "^9.1.3",
+    "babel-eslint": "^8.2.5",
+    "classnames": "^2.2.6",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-config-nz": "^1.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "mocha": "^5.0.5",
+    "node-sass": "^4.9.3",
+    "postcss-url": "^8.0.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-transition-group": "^2.4.0",
+    "rollup": "^0.65.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "dist"
+  ]
+}
