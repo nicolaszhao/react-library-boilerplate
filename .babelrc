@@ -11,9 +11,7 @@
         "@babel/preset-react"
       ],
       "plugins": [
-        ["@babel/plugin-transform-runtime", {
-          "useESModules": true
-        }],
+        "@babel/plugin-transform-runtime",
         ["@babel/plugin-proposal-class-properties", { 
           "loose": false 
         }]
