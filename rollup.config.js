@@ -3,7 +3,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import external from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
-import autoprefixer from 'autoprefixer';
+import postcssPresetEnv from 'postcss-preset-env';
 import url from 'postcss-url';
 
 import pkg from './package.json';
@@ -13,29 +13,29 @@ export default {
   output: [
     {
       file: pkg.main,
-      format: 'cjs'
+      format: 'cjs',
     },
     {
       file: pkg.module,
-      format: 'esm'
-    }
+      format: 'esm',
+    },
   ],
   plugins: [
     external(),
+    babel({
+      runtimeHelpers: true,
+      exclude: /node_modules/,
+    }),
     postcss({
       extract: pkg.style,
       plugins: [
-        autoprefixer(),
+        postcssPresetEnv(),
         url({
-          url: 'inline'
-        })
-      ]
-    }),
-    babel({
-      runtimeHelpers: true,
-      exclude: 'node_modules/**'
+          url: 'inline',
+        }),
+      ],
     }),
     resolve(),
-    commonjs()
-  ]
+    commonjs(),
+  ],
 };

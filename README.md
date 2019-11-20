@@ -1,45 +1,27 @@
-# {{title}} 
+# {{name}} 
 
-{{description}}
-
-## Install
+## 上手
 
 ```shell
 npm i {{name}}
 ```
 
-## Development
+## 调试
 
-1. run rollup to watch your `src/` module and automaticlly recompile it inito `dist/` whenever you make change.
+1、`npm link`
 
-   ```shell
-   # runs rollup with watch flag
-   npm start 
-   ```
+2、`npm start`，实时构建代码变更
 
-2. run the `example/` and linked to the local version of your module.
+3、在测试项目中，`npm link {{name}}`
 
-   ```shell
-   cd example
-   npm i
+4、导入组件
 
-   # link local module
-   npm i file:..
-   
-   # runs example dev server
-   npm start
-   ```
+```js
+import Example from '{{name}}';
+```
 
-3. import style of your module to `example/src/styles/base.scss`
+5、导入样式
 
-   ```scss
-   @import "~{{name}}/dist/{{name}}";
-   ```
-
-4. import your module to `example/src/containers/[Page]/index.js`
-
-   ```js
-   import { Example } from '{{name}}';
-   ```
-
-5. create `Container` in `example/src/containers` and edit `example/src/containers/routes.js` 
+```shell
+@import "~{{name}}/dist/{{name}}.css";
+```

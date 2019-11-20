@@ -1,71 +1,55 @@
 {
-  "name": "react-components-library-boilerplate",
+  "name": "nicolaz-react-library-boilerplate",
   "version": "0.1.0",
-  "description": "{{{description}}}",
-  "main": "dist/{{name}}.js",
-  "module": "dist/{{name}}.esm.js",
-  "style": "dist/{{name}}.css",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
+  "private": true,
+  "description": "An awesome React Component library",
+  "main": "dist/rc.cjs.js",
+  "module": "dist/rc.esm.js",
+  "style": "dist/rc.css",
   "scripts": {
-    "start": "cross-env NODE_ENV=production rollup -c -w",
-    "build": "cross-env NODE_ENV=production rollup -c",
-    "test": "cross-env NODE_ENV=test mocha --require @babel/register"
+    "start": "rollup -c -w --environment NODE_ENV:production",
+    "build": "rollup -c --environment NODE_ENV:production",
+    "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
+  "lint-staged": {
+    "src/**/*.js": "eslint"
+  },
   "keywords": [
-    "components",
-    "library"
+    "library",
+    "react-component"
   ],
-  "author": "{{{author}}}",
   "peerDependencies": {
-    "classnames": "^2.2.6",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "react-transition-group": "^2.4.0",
-    "@babel/runtime": "^7.0.0"
+    "react": "16.x",
+    "react-dom": "16.x"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.1",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
-    "autoprefixer": "^9.1.3",
-    "babel-eslint": "^10.0.1",
-    "classnames": "^2.2.6",
-    "cross-env": "^5.1.4",
-    "eslint": "^5.14.0",
-    "eslint-config-nz": "^1.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
-    "husky": "^1.3.1",
-    "lint-staged": "^8.1.4",
-    "mocha": "^5.0.5",
-    "node-sass": "^4.9.3",
+    "@hammal/babel-preset-app": "^0.11.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-nicolaz-base": "^0.5.3",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.4.3",
+    "node-sass": "^4.13.0",
+    "postcss-preset-env": "^6.7.0",
     "postcss-url": "^8.0.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-transition-group": "^2.4.0",
-    "rollup": "^0.65.0",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "^9.1.6",
-    "rollup-plugin-node-resolve": "^3.3.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rollup": "^1.27.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^1.6.2"
+    "rollup-plugin-postcss": "^2.0.3"
   },
-  "directories": {
-    "test": "test"
-  },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "files": [
     "dist"
   ]
