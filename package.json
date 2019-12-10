@@ -7,7 +7,7 @@
   "module": "dist/rc.esm.js",
   "style": "dist/rc.css",
   "scripts": {
-    "start": "rollup -c -w --environment NODE_ENV:production",
+    "start": "rollup -c -w --environment NODE_ENV:development",
     "build": "rollup -c --environment NODE_ENV:production",
     "prepublishOnly": "npm run build"
   },
