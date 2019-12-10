@@ -19,7 +19,7 @@ import MyComponent from '{{name}}';
 #### 组件样式
 
 ```scss
-@import "~{{name}}/dist/{{name}}.css";
+@import "~{{name}}/dist/pkg.css";
 ```
 
 ## 开发
