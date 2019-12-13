@@ -30,9 +30,12 @@
   "devDependencies": {
     "@hammal/babel-preset-app": "^0.11.1",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.6.0",
-    "eslint-config-nicolaz-base": "^0.5.3",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint": "^6.0.0",
+    "eslint-config-nicolaz": "^0.6.3",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.4.3",
     "node-sass": "^4.13.0",
@@ -52,5 +55,6 @@
   ],
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {}
 }
